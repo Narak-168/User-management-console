@@ -45,8 +45,8 @@ public class UserController {
         User user = new User(userIdCounter++, name, email);
         users.add(user);
         TelegramNotification notification = new TelegramNotification();
-        notification.sendNotification("User created successfully!");
-        System.out.println("User created successfully! User ID: " + user.getId());
+        notification.sendNotification("User created successfully" + "\n -- User ID: " + user.getId() + "\n -- User UUID: " + user.getUuid() +"\n -- Username: "+ user.getName() +"\n -- Email: "+ user.getEmail());
+        System.out.println("User created successfully! User ID: "  + user.getId());
     }
     private void searchUser(){
         String uuid = view.getInput("Enter UUID: ");
